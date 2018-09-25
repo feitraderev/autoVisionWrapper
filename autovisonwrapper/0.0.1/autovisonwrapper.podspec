@@ -115,7 +115,7 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  s.framework  = "AutoVision"
+  # s.framework  = "SomeFramework"
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
   # s.library   = "iconv"
@@ -131,18 +131,18 @@ Pod::Spec.new do |s|
   # s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # s.dependency 'Alamofire'
+  s.dependency 'Alamofire'
 
-  # other_frameworks = ['AutoVision']
-  # other_ldflags = '$(inherited) -framework ' + other_frameworks.join(' -framework ') + ' -lz -lstdc++'
+  other_frameworks = ['AutoVision']
+  other_ldflags = '$(inherited) -framework ' + other_frameworks.join(' -framework ') + ' -lz -lstdc++'
 
-  # s.xcconfig = {
-  #   # autovision in Development pods
-  #    # 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/AutoVision"',
+  s.xcconfig = {
+    # autovision in Development pods
+     # 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/AutoVision"',
      
-  #   'OTHER_LDFLAGS[arch=arm64]'  => other_ldflags,
-  #   'OTHER_LDFLAGS[arch=armv7]'  => other_ldflags,
-  #   'OTHER_LDFLAGS[arch=armv7s]' => other_ldflags
-  # }
+    'OTHER_LDFLAGS[arch=arm64]'  => other_ldflags,
+    'OTHER_LDFLAGS[arch=armv7]'  => other_ldflags,
+    'OTHER_LDFLAGS[arch=armv7s]' => other_ldflags
+  }
 
 end
