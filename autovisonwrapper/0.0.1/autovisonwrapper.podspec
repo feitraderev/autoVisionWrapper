@@ -78,8 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  #s.source     = { :git => 'git@github.com:TradeRev/autovision-ios.git', :tag => '2.2.0' }
-  s.source = './AutoVision'
+  s.source     = { :git => 'git@github.com:TradeRev/autovision-ios.git', :tag => '2.2.0' }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -116,7 +115,7 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  # s.framework  = "SomeFramework"
+  s.framework  = "AutoVision"
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
   # s.library   = "iconv"
@@ -132,18 +131,18 @@ Pod::Spec.new do |s|
   # s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  s.dependency 'Alamofire'
+  # s.dependency 'Alamofire'
 
-  other_frameworks = ['AutoVision']
-  other_ldflags = '$(inherited) -framework ' + other_frameworks.join(' -framework ') + ' -lz -lstdc++'
+  # other_frameworks = ['AutoVision']
+  # other_ldflags = '$(inherited) -framework ' + other_frameworks.join(' -framework ') + ' -lz -lstdc++'
 
-  s.xcconfig = {
-    # autovision in Development pods
-     # 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/AutoVision"',
+  # s.xcconfig = {
+  #   # autovision in Development pods
+  #    # 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/AutoVision"',
      
-    'OTHER_LDFLAGS[arch=arm64]'  => other_ldflags,
-    'OTHER_LDFLAGS[arch=armv7]'  => other_ldflags,
-    'OTHER_LDFLAGS[arch=armv7s]' => other_ldflags
-  }
+  #   'OTHER_LDFLAGS[arch=arm64]'  => other_ldflags,
+  #   'OTHER_LDFLAGS[arch=armv7]'  => other_ldflags,
+  #   'OTHER_LDFLAGS[arch=armv7s]' => other_ldflags
+  # }
 
 end
