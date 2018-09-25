@@ -78,7 +78,8 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source     = { :git => 'git@github.com:TradeRev/autovision-ios.git', :tag => '2.2.0' }
+  #s.source     = { :git => 'git@github.com:TradeRev/autovision-ios.git', :tag => '2.2.0' }
+  s.source = './AutoVision'
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
