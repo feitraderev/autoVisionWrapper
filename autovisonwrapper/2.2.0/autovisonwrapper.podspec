@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "autovisonwrapper"
-  s.version      = "0.0.1"
+  s.version      = "2.2.0"
   s.summary      = "A short description of autovisonwrapper."
 
   # This description is used to generate tags and improve search results.
@@ -79,7 +79,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source     = { :git => 'git@github.com:TradeRev/autovision-ios.git', :tag => '2.2.0' }
+  s.source     = { :git => 'git@github.com:TradeRev/autovision-ios.git', :tag => "v#{s.version.to_s}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
