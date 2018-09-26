@@ -92,6 +92,7 @@ Pod::Spec.new do |s|
 
   s.source_files = 'AutoVision/Classes/**/*'
   s.exclude_files = "AutoVision/*"
+  s.public_header_files = 'Pod/Classes/**/*.h'
 
   # s.public_header_files = "Classes/**/*.h"
 
@@ -134,16 +135,18 @@ Pod::Spec.new do |s|
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   s.dependency 'Alamofire'
 
-  other_frameworks = ['AutoVision']
-  other_ldflags = '$(inherited) -framework ' + other_frameworks.join(' -framework ') + ' -lz -lstdc++'
+  # other_frameworks = ['AutoVision']
+  # other_ldflags = '$(inherited) -framework ' + other_frameworks.join(' -framework ') + ' -lz -lstdc++'
 
-  s.xcconfig = {
-    # autovision in Development pods
-     # 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/AutoVision"',
+  # s.xcconfig = {
+  #   # autovision in Development pods
+  #    # 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/AutoVision"',
      
-    'OTHER_LDFLAGS[arch=arm64]'  => other_ldflags,
-    'OTHER_LDFLAGS[arch=armv7]'  => other_ldflags,
-    'OTHER_LDFLAGS[arch=armv7s]' => other_ldflags
-  }
+  #   'OTHER_LDFLAGS[arch=arm64]'  => other_ldflags,
+  #   'OTHER_LDFLAGS[arch=armv7]'  => other_ldflags,
+  #   'OTHER_LDFLAGS[arch=armv7s]' => other_ldflags
+  # }
+
+  s.frameworks = 'UIKit', 'CoreML', 'Vision', 'AVFoundation', 'CoreMotion', 'ARKit', 'Metal'
 
 end
